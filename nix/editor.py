@@ -4,7 +4,7 @@ from rich.console import Console
 console = Console()
 
 def create(file: str):
-    with open(file, "w") as f:
+    with open(file, "w"):
         ...
     print("File created Successfully.")
 
