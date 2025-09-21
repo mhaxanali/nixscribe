@@ -37,7 +37,7 @@ def main():
         if check_file_existence(file_path):
             if action == "read":
                 if os.path.getsize(file_path) > 0:
-                    editor.read(file_path)
+                    editor.view(file_path)
                 else:
                     print("Error: Specified file is empty.")
                     sys.exit(1)
