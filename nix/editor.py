@@ -3,6 +3,7 @@ from rich.console import Console
 
 console = Console()
 
+
 def create(file: str):
     with open(file, "w"):
         ...
@@ -19,6 +20,4 @@ def view(file: str):
         console.print(file_data)
 
 
-
-def edit(file: str):
-    ...
+def edit(file: str): ...

@@ -10,14 +10,20 @@ def check_file_existence(file: str) -> bool:
 
 def main():
     parser = argparse.ArgumentParser(
-        prog='nix',
-        description='CLI Text Editor that supports file read/write and creation'
+        prog="nix",
+        description="CLI Text Editor that supports file read/write and creation",
     )
 
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--create", nargs=1, metavar="FILE", help="Create a new file at specified path")
-    group.add_argument("--read", nargs=1, metavar="FILE", help="Read contents of the file")
-    group.add_argument("--edit", nargs=1, metavar="FILE", help="Edit contents of the file")
+    group.add_argument(
+        "--create", nargs=1, metavar="FILE", help="Create a new file at specified path"
+    )
+    group.add_argument(
+        "--read", nargs=1, metavar="FILE", help="Read contents of the file"
+    )
+    group.add_argument(
+        "--edit", nargs=1, metavar="FILE", help="Edit contents of the file"
+    )
 
     args = parser.parse_args()
 
@@ -47,9 +53,9 @@ def main():
         else:
             print("Error: Specified file does not exist.")
             sys.exit(1)
-    elif action == 'create':
+    elif action == "create":
         editor.create(file_path)
-    
+
 
 if __name__ == "__main__":
     main()
