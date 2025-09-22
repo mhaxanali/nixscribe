@@ -1,7 +1,7 @@
 from prompt_toolkit import PromptSession
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.lexers import PygmentsLexer
-from pygments.lexers import PythonLexer
+from pygments.lexers import PythonLexer, HtmlLexer, CssLexer, JavascriptLexer
 from rich.syntax import Syntax
 from rich.console import Console
 from pathlib import Path
@@ -35,7 +35,15 @@ def edit(file: str):
         with open(file, "r") as f:
             text = f.read()
 
-    lexer = PygmentsLexer(PythonLexer)
+    ext_map = {
+    ".py": PythonLexer,
+    ".html": HtmlLexer,
+    ".css": CssLexer,
+    ".js": JavascriptLexer
+    }
+
+    lexer_class = ext_map.get(Path(file).suffix)
+    lexer = PygmentsLexer(lexer_class) if lexer_class else None
 
     kb = KeyBindings()
 
