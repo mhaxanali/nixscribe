@@ -71,7 +71,7 @@ def edit(file: str):
         lexer=lexer,
         key_bindings=kb,
         multiline=True,
-        bottom_toolbar="Ctrl+C: Quit | Ctrl+S: Save | F3: Save & Quit",
+        bottom_toolbar="Ctrl+Q: Quit | Ctrl+S: Save | F3: Save & Quit",
     )
 
     session.prompt("> ", default=text)
