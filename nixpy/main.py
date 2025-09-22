@@ -1,7 +1,7 @@
 import argparse
 import sys
 import os
-import editor
+from . import editor
 
 
 def check_file_existence(file: str) -> bool:
