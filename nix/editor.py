@@ -1,10 +1,11 @@
 from prompt_toolkit import PromptSession
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.lexers import PygmentsLexer
-from pygments.lexers import PythonLexer, HtmlLexer, CssLexer, JavascriptLexer
+from pygments.lexers import PythonLexer
 from rich.syntax import Syntax
 from rich.console import Console
 from pathlib import Path
+import os
 
 console = Console()
 
@@ -28,20 +29,13 @@ def view(file: str):
 
 
 def edit(file: str):
-    if Path(file).exists() and Path(file).stat().st_size > 0:
+    os.system("cls" if os.name == "nt" else "clear")
+    text = ""
+    if Path(file).exists():
         with open(file, "r") as f:
             text = f.read()
-    else:
-        text = ""
 
-    ext_map = {
-        ".py": PythonLexer,
-        ".html": HtmlLexer,
-        ".css": CssLexer,
-        ".js": JavascriptLexer,
-    }
-    lexer_class = ext_map.get(Path(file).suffix, None)
-    lexer = PygmentsLexer(lexer_class) if lexer_class else None
+    lexer = PygmentsLexer(PythonLexer)
 
     kb = KeyBindings()
 
@@ -55,18 +49,21 @@ def edit(file: str):
     def _(event):
         with open(file, "w") as f:
             f.write(event.app.current_buffer.text)
-        event.app.exit(result=None)
+        event.app.exit()
 
     @kb.add("c-q")
     def _(event):
-        event.app.exit(result=None)
+        event.app.exit()
+
+    @kb.add("tab")
+    def _(event):
+        event.app.current_buffer.insert_text("    ")
 
     session = PromptSession(
-        key_bindings=kb,
         lexer=lexer,
+        key_bindings=kb,
         multiline=True,
-        default=text,
-        bottom_toolbar="^C: Quit | Ctrl+S: Save | F3: Save & Quit",
+        bottom_toolbar="Ctrl+C: Quit | Ctrl+S: Save | F3: Save & Quit",
     )
 
-    session.prompt("> ", multiline=True, default=text)
+    session.prompt("> ", default=text)
