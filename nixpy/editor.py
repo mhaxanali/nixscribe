@@ -36,10 +36,10 @@ def edit(file: str):
             text = f.read()
 
     ext_map = {
-    ".py": PythonLexer,
-    ".html": HtmlLexer,
-    ".css": CssLexer,
-    ".js": JavascriptLexer
+        ".py": PythonLexer,
+        ".html": HtmlLexer,
+        ".css": CssLexer,
+        ".js": JavascriptLexer,
     }
 
     lexer_class = ext_map.get(Path(file).suffix)
