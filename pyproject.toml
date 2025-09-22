@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nixscribe"
-version = "0.1.1"
+version = "0.1.2"
 description = "A CLI Text Editor that supports Syntax Highlighting for .py, .html, .css and .js files."
 readme = "README.md"
 requires-python = ">=3.10"

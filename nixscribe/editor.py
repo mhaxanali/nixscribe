@@ -51,7 +51,6 @@ def edit(file: str):
     def _(event):
         with open(file, "w") as f:
             f.write(event.app.current_buffer.text)
-        print(f"\nSaved {file}!")
 
     @kb.add("f3")
     def _(event):
