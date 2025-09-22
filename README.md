@@ -2,7 +2,14 @@
 _By mhasanali2010_
 
 ## About nixpy
-A Text Editor made in Python that supports CLI arguments --create, --read, --edit to create, read, and edit files respectively. Supports syntax highlighting for Python, HTML, CSS, JavaScript. Originally I planned to use `getkey` module to handle editing but then due to lack of cursor movement in that model, switched to `prompt_toolkit`. Syntax Highlighting in `edit()` is done using `pygments` and in `view()` it is done using `rich` as I originally planned to use `rich` for syntax highlighting throughout.
+nixpy is a terminal-based text editor written in Python.  
+It supports CLI arguments:
+- `--create` — create files
+- `--read` — view files with syntax highlighting
+- `--edit` — edit files with syntax highlighting
+
+Syntax highlighting is supported for Python, HTML, CSS, and JavaScript.  
+Editing is powered by `prompt_toolkit`, while viewing uses `rich` for syntax highligh
 ## Resources
 ### PyPI Link
 https://pypi.org/project/nixpy
