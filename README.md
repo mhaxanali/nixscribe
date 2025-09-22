@@ -1,8 +1,8 @@
-# nixpy — Terminal Text Editor
+# nixscribe — Terminal Text Editor
 _By mhasanali2010_
 
-## About nixpy
-nixpy is a terminal-based text editor written in Python.  
+## About nixscribe
+nixscribe is a terminal-based text editor written in Python.  
 It supports CLI arguments:
 - `--create` — create files
 - `--read` — view files with syntax highlighting
@@ -12,9 +12,9 @@ Syntax highlighting is supported for Python, HTML, CSS, and JavaScript.
 Editing is powered by `prompt_toolkit`, while viewing uses `rich` for syntax highligh
 ## Resources
 ### PyPI Link
-https://pypi.org/project/nixpy
+https://pypi.org/project/nixscribe
 ### GitHub Repository
-https://github.com/mhasanali2010/nixpy
+https://github.com/mhasanali2010/nixscribe
 
 ## External Dependencies
 Stated in `requirements.txt`:
@@ -24,20 +24,20 @@ Stated in `requirements.txt`:
 ## Installation
 Install using pip:
 ```bash
-pip install nixpy
+pip install nixscribe
 ```
 ##  Usage
 - To create a file:
     ```bash
-    nixpy --create <path\to\file>
+    nixscribe --create <path\to\file>
     ```
 - To read from a file:
     ```bash
-    nixpy --read <path\to\file>
+    nixscribe --read <path\to\file>
     ```
 - To edit a file:
     ```bash
-    nixpy --edit <path\to\file>
+    nixscribe --edit <path\to\file>
     ```
 ### Keybinds in Edit Mode
 - Ctrl+Q to quit editing without saving.

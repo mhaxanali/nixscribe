@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "nixpy"
+name = "nixscribe"
 version = "0.1.0"
 description = "A CLI Text Editor that supports Syntax Highlighting for .py, .html, .css and .js files."
 readme = "README.md"

@@ -10,7 +10,7 @@ def check_file_existence(file: str) -> bool:
 
 def main():
     parser = argparse.ArgumentParser(
-        prog="nixpy",
+        prog="nixscribe",
         description="CLI Text Editor that supports file read/write and creation",
     )
 
