@@ -9,7 +9,7 @@ It supports CLI arguments:
 - `--edit` — edit files with syntax highlighting
 
 Syntax highlighting is supported for Python, HTML, CSS, and JavaScript.  
-Editing is powered by `prompt_toolkit`, while viewing uses `rich` for syntax highlighting
+Editing is powered by `prompt_toolkit`, while viewing uses `rich` for syntax highlighting.
 ## Resources
 ### PyPI Link
 https://pypi.org/project/nixscribe
@@ -29,17 +29,17 @@ pip install nixscribe
 ##  Usage
 - To create a file:
     ```bash
-    nixscribe --create <path\to\file>
+    nixscribe --create <path/to/file>
     ```
 - To read from a file:
     ```bash
-    nixscribe --read <path\to\file>
+    nixscribe --read <path/to/file>
     ```
 - To edit a file:
     ```bash
-    nixscribe --edit <path\to\file>
+    nixscribe --edit <path/to/file>
     ```
 ### Keybinds in Edit Mode
-- Ctrl+Q to quit editing without saving.
+- Ctrl+Q to quit editing without saving, changes are discarded immediately.
 - Ctrl+S to save without quitting.
 - F3 to save & quit.
