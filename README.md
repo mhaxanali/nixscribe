@@ -40,6 +40,6 @@ pip install nixscribe
     nixscribe --edit <path/to/file>
     ```
 ### Keybinds in Edit Mode
-- Ctrl+Q to quit editing without saving, changes are discarded immediately.
+- Ctrl+Q to quit editing without saving (changes are discarded immediately).
 - Ctrl+S to save without quitting.
 - F3 to save & quit.
