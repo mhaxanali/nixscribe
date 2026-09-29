@@ -1,5 +1,5 @@
 # nixscribe — Terminal Text Editor
-_By mhasanali2010_
+_By mhaxanali_
 
 ## About nixscribe
 nixscribe is a terminal-based text editor written in Python.  
@@ -9,12 +9,12 @@ It supports CLI arguments:
 - `--edit` — edit files with syntax highlighting
 
 Syntax highlighting is supported for Python, HTML, CSS, and JavaScript.  
-Editing is powered by `prompt_toolkit`, while viewing uses `rich` for syntax highligh
+Editing is powered by `prompt_toolkit`, while viewing uses `rich` for syntax highlighting
 ## Resources
 ### PyPI Link
 https://pypi.org/project/nixscribe
 ### GitHub Repository
-https://github.com/mhasanali2010/nixscribe
+https://github.com/mhaxanali/nixscribe
 
 ## External Dependencies
 Stated in `requirements.txt`:
